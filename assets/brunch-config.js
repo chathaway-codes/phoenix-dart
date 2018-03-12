@@ -37,7 +37,7 @@ exports.config = {
   // Phoenix paths configuration
   paths: {
     // Dependencies and current project directories to watch
-    watched: ["static", "css", "js", "vendor", "dart"],
+    watched: ["static", "css", "js", "vendor", "dart/web"],
     // Where to compile files to
     public: "../priv/static"
   },
@@ -47,6 +47,10 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/vendor/]
+    },
+    dart: {
+      source: "dart/",
+      output: "../priv/static/dart/"
     }
   },
 
